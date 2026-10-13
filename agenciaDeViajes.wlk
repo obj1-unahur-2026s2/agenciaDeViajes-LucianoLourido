@@ -68,9 +68,9 @@ object guia {
     method cumpleCondicion(coordinador) = coordinador.estaMotivado()
 
 }
-class Asitente inherits Coordinador {
+object asitente {
   method cumpleCondicion(coordinador) = coordinador.aniosDeExp() >= 3
 }
-class Acompañante inherits Coordinador {
+object acompañante {
   method cumpleCondicion(coordinador) = true
 }
