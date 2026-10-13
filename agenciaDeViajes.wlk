@@ -20,6 +20,13 @@ class ViajeNacional inherits Agencia{
       actividad.add(actividadAdd)
     } 
     override method esPremium() = self.duracionEnDias() > 10 and coordinador.esAltamenteCalificado(self)
+    method costoTotal(){
+    if (self.esPremium()) {
+            super() * 1.05
+        } else {
+            super()
+        }
+    }
 
 }
 class ViajeProvincial inherits ViajeNacional{
@@ -39,7 +46,7 @@ class ViajeInternacional inherits Agencia{
 }
 
 class Coordinador{
-    const roles = ["Guia","Asistente Logistico","Acompañante"]
+    const roles = [guia,asistente,acompañante]
     const cantViajes 
     var rolActual = "Guia"
     var estaMotivado = true
